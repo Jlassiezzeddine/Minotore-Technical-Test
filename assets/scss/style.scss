@@ -1,0 +1,29 @@
+/* Theme Description
+-------------------------------------------------
+
+	  Theme Name:   Minotore Test   
+	  Author:   Ezzeddine Jlassi
+	  Description:  Interview Test
+	  Version:  
+	  
+------------------------------------------------- 
+*/
+
+/* CSS Index
+-------------------------------------------------
+
+	1. Theme default css
+	2. Header
+	3. Appointment-area
+	4. Services-area
+	5. App-&-Office-area
+	6. Testimonials
+	7. Footer
+
+-------------------------------------------------
+*/
+
+@import "./1-utilities/reset";
+@import "./1-utilities/variables";
+
+@import "./2-global/common";

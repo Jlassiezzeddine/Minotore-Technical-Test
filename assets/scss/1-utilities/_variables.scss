@@ -1,0 +1,21 @@
+/*--- Variables ---*/
+
+// Font Family
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+$font_1: "Poppins", sans-serif; //Global Font
+
+//Responsive
+$laptop: "only screen and (min-width: 1200px) and (max-width: 1600px)";
+$lg: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$md: "only screen and (min-width: 768px) and (max-width: 991px)";
+$sm: "only screen and (min-width: 576px) and (max-width: 767px)";
+$xs: "(max-width: 575px)";
+
+//Colors
+
+$primary: #ffb462;
+$secondary: #88d7af;
+$dark: #19191b;
+$grey: #7f7f7f;
+$light-grey: #f6f6f7;
+$light: #ffffff;
