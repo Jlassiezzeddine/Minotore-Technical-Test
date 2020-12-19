@@ -1,0 +1,37 @@
+@media #{$md, $sm, $xs} {
+  #hero-img {
+    display: none;
+  }
+  .hero-content {
+    h1 {
+      font-size: 3rem;
+      width: 100% !important;
+    }
+  }
+  .app-and-location-section .container {
+    padding: 4rem 1rem !important;
+  }
+  .mapouter {
+    margin-top: 4rem;
+  }
+  .owl-carousel {
+    margin-top: 2rem;
+  }
+  section {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+  .section-title {
+    h2 {
+      text-align: center;
+    }
+  }
+}
+@media #{$sm, $xs} {
+  .button-group {
+    flex-direction: column;
+    button {
+      margin-top: 2rem;
+    }
+  }
+}

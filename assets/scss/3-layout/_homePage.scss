@@ -1,0 +1,213 @@
+/*--------------- 3- Header -----------------*/
+.hero-wrapper {
+  height: calc(100vh - 5rem);
+  max-height: 800px;
+  .hero-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      width: 13ch;
+    }
+    button {
+      margin-top: 2rem;
+    }
+  }
+  .hero-img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+/*--------------- 4- Appointment Section -----------------*/
+
+.section-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h4 {
+    font-size: 1rem;
+    color: $grey;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.appointment-box {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $light;
+  @include box-shadow(0 6px 32px 4px rgba(0, 0, 0, 0.068));
+
+  .appointment-item {
+    padding: 2rem;
+    h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    p {
+      margin-top: 0.8rem;
+    }
+    a {
+      font-size: 0.8rem;
+      color: $secondary;
+    }
+  }
+  .appointment-item_primary {
+    background-color: $primary;
+    a {
+      color: $dark !important;
+    }
+  }
+}
+
+@media #{$md} {
+  .appointment-box {
+    .appointment-item:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+@media #{$sm, $xs} {
+  .appointment-box {
+    flex-direction: column;
+    padding: 1rem 0;
+    .appointment-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}
+
+/*--------------- 5- Services Section -----------------*/
+
+.services-box {
+  margin-top: 4rem;
+  .service-item {
+    border-radius: 10px;
+    padding: 2rem;
+    @include box-shadow(0 16px 16px 4px rgba(0, 0, 0, 0.068));
+    .service-title {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      width: 15ch;
+    }
+    p {
+      margin-top: 1.5rem;
+      width: 20ch;
+    }
+  }
+}
+
+@media #{$sm, $xs} {
+  .service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/*--------------- 6- App Section -----------------*/
+
+.app-and-location-section .container {
+  border-radius: 10px;
+  background-color: $light-grey;
+  padding: 8rem 5rem;
+}
+.app-img {
+  img {
+    width: 75%;
+    object-fit: cover;
+  }
+}
+
+.app-content,
+.location-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+  }
+  p {
+    margin-top: 1rem;
+  }
+  .button-group {
+    display: flex;
+    button {
+      margin-right: 2rem;
+      i {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.mapouter {
+  iframe {
+    border-radius: 10px;
+  }
+}
+
+/*--------------- 7- Testimonials Section -----------------*/
+.testimonials-heading {
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  p {
+    margin-top: 1rem;
+  }
+}
+.testimonials-top {
+  display: flex;
+  .testimonials-img {
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+
+  .testimonial-top-content {
+    margin-left: 1rem;
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    p {
+      color: $dark;
+    }
+    .rating {
+      .star-color {
+        color: $primary;
+      }
+    }
+  }
+}

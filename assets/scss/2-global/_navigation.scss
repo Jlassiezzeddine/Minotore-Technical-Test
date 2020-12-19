@@ -1,0 +1,16 @@
+//Navigation
+.navbar {
+  height: 5rem !important;
+  background-color: $light !important;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.nav-link {
+  color: $dark !important;
+  font-weight: 600;
+  &:hover {
+    color: lighten($color: $dark, $amount: 25) !important;
+  }
+}

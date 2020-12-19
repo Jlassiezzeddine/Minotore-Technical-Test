@@ -4,20 +4,20 @@
 	  Theme Name:   Minotore Test   
 	  Author:   Ezzeddine Jlassi
 	  Description:  Interview Test
-	  Version:  
+	  Version:  1.0.0
 
 ------------------------------------------------- 
 */
 /* CSS Index
 -------------------------------------------------
 
-	1. Theme default css
-	2. Header
-	3. Appointment-area
-	4. Services-area
-	5. App-&-Office-area
-	6. Testimonials
-	7. Footer
+	1. Style Reset
+	2. Theme Default Style
+	3. Header
+	4. Appointment Section
+	5. Services Section
+	6. App Section
+	7. Testimonials Section
 
 -------------------------------------------------
 */
@@ -153,13 +153,21 @@ table {
   border-spacing: 0;
 }
 
-/*--- Variables ---*/
-/* 1. Theme default css */
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/*------------------- 1- Theme Default Style --------------------------*/
 body {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
+  max-width: 1366px;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 h1,
@@ -181,13 +189,362 @@ p {
   color: #7f7f7f;
   font-size: 16px;
   line-height: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   font-weight: normal;
 }
 
-main {
-  max-width: 1192px;
+a {
+  text-decoration: none;
+  color: #19191b;
+}
+a:hover {
+  text-decoration: none;
+  color: #56565d;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.main-btn {
+  border: 1px solid #19191b;
+  padding: 1rem 2rem;
+  color: #ffffff;
+  background-color: #19191b;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  outline: none !important;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transition: all 0.1s ease-out 0s;
+  -moz-transition: all 0.1s ease-out 0s;
+  -ms-transition: all 0.1s ease-out 0s;
+  -o-transition: all 0.1s ease-out 0s;
+  transition: all 0.1s ease-out 0s;
+}
+.main-btn i {
+  margin-left: 1rem;
+}
+.main-btn:hover {
+  background-color: #ffffff;
+  color: #19191b;
+}
+.main-btn:active {
+  transform: scale(0.95);
+  outline: none !important;
+}
+
+.outlined-btn {
+  border: 1px solid #19191b;
+  padding: 1rem 2rem;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transition: all 0.1s ease-out 0s;
+  -moz-transition: all 0.1s ease-out 0s;
+  -ms-transition: all 0.1s ease-out 0s;
+  -o-transition: all 0.1s ease-out 0s;
+  transition: all 0.1s ease-out 0s;
+  cursor: pointer;
+  width: fit-content;
+  font-weight: 600;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none !important;
+}
+.outlined-btn:hover {
+  background-color: #19191b;
+  color: #ffffff;
+}
+.outlined-btn:active {
+  transform: scale(0.95);
+  outline: none !important;
+}
+
+.secondary-btn {
+  color: #40aa75 !important;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  background-color: #88d7af;
+}
+
+section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.navbar {
+  height: 5rem !important;
+  background-color: #ffffff !important;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: #19191b !important;
+  font-weight: 600;
+}
+.nav-link:hover {
+  color: #56565d !important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  #hero-img {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    width: 100% !important;
+  }
+
+  .app-and-location-section .container {
+    padding: 4rem 1rem !important;
+  }
+
+  .mapouter {
+    margin-top: 4rem;
+  }
+
+  .owl-carousel {
+    margin-top: 2rem;
+  }
+
+  section {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .section-title h2 {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .button-group {
+    flex-direction: column;
+  }
+  .button-group button {
+    margin-top: 2rem;
+  }
+}
+/*--------------- 3- Header -----------------*/
+.hero-wrapper {
+  height: calc(100vh - 5rem);
+  max-height: 800px;
+}
+.hero-wrapper .hero-content {
+  height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-wrapper .hero-content h1 {
+  width: 13ch;
+}
+.hero-wrapper .hero-content button {
+  margin-top: 2rem;
+}
+.hero-wrapper .hero-img {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-wrapper .hero-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*--------------- 4- Appointment Section -----------------*/
+.section-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-title h4 {
+  font-size: 1rem;
+  color: #7f7f7f;
+  text-transform: uppercase;
+}
+.section-title h2 {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.appointment-box {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 6px 32px 4px rgba(0, 0, 0, 0.068);
+  -moz-box-shadow: 0 6px 32px 4px rgba(0, 0, 0, 0.068);
+  box-shadow: 0 6px 32px 4px rgba(0, 0, 0, 0.068);
+}
+.appointment-box .appointment-item {
+  padding: 2rem;
+}
+.appointment-box .appointment-item h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.appointment-box .appointment-item p {
+  margin-top: 0.8rem;
+}
+.appointment-box .appointment-item a {
+  font-size: 0.8rem;
+  color: #40aa75;
+}
+.appointment-box .appointment-item_primary {
+  background-color: #ffb462;
+}
+.appointment-box .appointment-item_primary a {
+  color: #19191b !important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .appointment-box .appointment-item:nth-child(4) {
+    display: none;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .appointment-box {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+  .appointment-box .appointment-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+/*--------------- 5- Services Section -----------------*/
+.services-box {
+  margin-top: 4rem;
+}
+.services-box .service-item {
+  border-radius: 10px;
+  padding: 2rem;
+  -webkit-box-shadow: 0 16px 16px 4px rgba(0, 0, 0, 0.068);
+  -moz-box-shadow: 0 16px 16px 4px rgba(0, 0, 0, 0.068);
+  box-shadow: 0 16px 16px 4px rgba(0, 0, 0, 0.068);
+}
+.services-box .service-item .service-title {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 15ch;
+}
+.services-box .service-item p {
+  margin-top: 1.5rem;
+  width: 20ch;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+/*--------------- 6- App Section -----------------*/
+.app-and-location-section .container {
+  border-radius: 10px;
+  background-color: #f6f6f7;
+  padding: 8rem 5rem;
+}
+
+.app-img img {
+  width: 75%;
+  object-fit: cover;
+}
+
+.app-content,
+.location-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.app-content h3,
+.location-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+.app-content p,
+.location-content p {
+  margin-top: 1rem;
+}
+.app-content .button-group,
+.location-content .button-group {
+  display: flex;
+}
+.app-content .button-group button,
+.location-content .button-group button {
+  margin-right: 2rem;
+}
+.app-content .button-group button i,
+.location-content .button-group button i {
+  margin-left: 1rem;
+}
+
+.mapouter iframe {
+  border-radius: 10px;
+}
+
+/*--------------- 7- Testimonials Section -----------------*/
+.testimonials-heading h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.testimonials-heading p {
+  margin-top: 1rem;
+}
+
+.testimonials-top {
+  display: flex;
+}
+.testimonials-top .testimonials-img .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.testimonials-top .testimonial-top-content {
+  margin-left: 1rem;
+}
+.testimonials-top .testimonial-top-content h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.testimonials-top .testimonial-top-content p {
+  color: #19191b;
+}
+.testimonials-top .testimonial-top-content .rating .star-color {
+  color: #ffb462;
 }
 
 /*# sourceMappingURL=style.css.map */

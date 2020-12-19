@@ -1,10 +1,13 @@
-/* 1. Theme default css */
+/*------------------- 1- Theme Default Style --------------------------*/
 
 body {
   font-family: $font_1;
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
+  max-width: 1366px;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -26,10 +29,88 @@ p {
 
   font-size: 16px;
   line-height: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   font-weight: normal;
 }
-main {
-  max-width: 1192px;
-  width: 100%;
+
+a {
+  text-decoration: none;
+  color: $dark;
+  &:hover {
+    text-decoration: none;
+    color: lighten($color: $dark, $amount: 25);
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+//Buttons
+.main-btn {
+  border: 1px solid $dark;
+  padding: 1rem 2rem;
+  color: $light;
+  background-color: $dark;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  outline: none !important;
+  @include border-radius(10px);
+  @include transition(0.1s);
+  i {
+    margin-left: 1rem;
+  }
+  &:hover {
+    background-color: $light;
+    color: $dark;
+  }
+  &:active {
+    transform: scale(0.95);
+    outline: none !important;
+  }
+}
+
+.outlined-btn {
+  border: 1px solid $dark;
+  padding: 1rem 2rem;
+  @include border-radius(10px);
+  @include transition(0.1s);
+  cursor: pointer;
+  width: fit-content;
+  font-weight: 600;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none !important;
+  &:hover {
+    background-color: $dark;
+    color: $light;
+  }
+  &:active {
+    transform: scale(0.95);
+    outline: none !important;
+  }
+}
+.secondary-btn {
+  color: $secondary !important;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  background-color: $secondary-light;
+}
+
+//Section Style
+
+section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
